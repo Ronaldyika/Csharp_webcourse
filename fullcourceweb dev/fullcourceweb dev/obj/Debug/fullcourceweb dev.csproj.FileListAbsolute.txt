@@ -1,0 +1,18 @@
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\fullcourceweb dev.dll.config
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\fullcourceweb dev.dll
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\fullcourceweb dev.pdb
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Helpers.dll
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Mvc.dll
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Razor.dll
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Webpages.dll
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Webpages.Razor.dll
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Razor.xml
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Webpages.xml
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Webpages.Razor.xml
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Helpers.xml
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\bin\System.Web.Mvc.xml
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\obj\Debug\fullcourceweb dev.csprojResolveAssemblyReference.cache
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\obj\Debug\fullcourceweb dev.dll
+C:\Users\Ronald-Yika\Desktop\c# crash\fullcourceweb dev\fullcourceweb dev\obj\Debug\fullcourceweb dev.pdb
