@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<table>
+    <tr>
+        <th>EmployeeID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Tell</th>
+        <th>Married</th>
+    </tr>
+@foreach (var _employee in @ViewBag.Employee) {
+
+    <tr>
+        <td>
+            @_employee.EmployeeID
+        </td>
+            <td>
+                @_employee.name
+            </td>
+            <td>
+                @_employee.address
+            </td>
+            <td>
+                @_employee.tell
+            </td>
+            <td>
+                @if (_employee.married == true)
+                {
+                    <p>Married</p>
+                }
+                else
+                {
+                    <p>single</p>
+                }
+            </td>
+    </tr>
+}
+    
+</table>
