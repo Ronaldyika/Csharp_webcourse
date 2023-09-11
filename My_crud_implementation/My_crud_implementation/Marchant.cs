@@ -177,4 +177,9 @@ namespace My_crud_implementation
             dgvMarchant();
         }
     }
+
+    class Constring
+    {
+        public SqlConnection _sqlcon;
+    }
 }

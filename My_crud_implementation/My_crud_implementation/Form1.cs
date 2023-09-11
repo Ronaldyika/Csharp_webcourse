@@ -25,6 +25,8 @@ namespace My_crud_implementation
 
         }
 
+         Constring _constring = new Constring();
+
 
         public Yika()
         {

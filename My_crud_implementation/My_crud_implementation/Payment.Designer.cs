@@ -32,10 +32,16 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.dgvMarchant = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMarchant = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarchant)).BeginInit();
             this.SuspendLayout();
@@ -63,10 +69,12 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox2.Controls.Add(this.txtMarchant);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtAmount);
+            this.groupBox2.Controls.Add(this.txtCustomerID);
             this.groupBox2.Location = new System.Drawing.Point(9, 83);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(491, 72);
@@ -91,19 +99,20 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Amount";
             // 
-            // textBox1
+            // txtAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtAmount.Location = new System.Drawing.Point(52, 19);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(194, 20);
+            this.txtAmount.TabIndex = 9;
             // 
-            // textBox2
+            // txtCustomerID
             // 
-            this.textBox2.Location = new System.Drawing.Point(340, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(172, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtCustomerID.Location = new System.Drawing.Point(340, 19);
+            this.txtCustomerID.Name = "txtCustomerID";
+            this.txtCustomerID.ReadOnly = true;
+            this.txtCustomerID.Size = new System.Drawing.Size(145, 20);
+            this.txtCustomerID.TabIndex = 8;
             // 
             // dgvMarchant
             // 
@@ -112,26 +121,84 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMarchant.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dgvMarchant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarchant.Location = new System.Drawing.Point(9, 161);
+            this.dgvMarchant.Location = new System.Drawing.Point(185, 161);
             this.dgvMarchant.Name = "dgvMarchant";
-            this.dgvMarchant.Size = new System.Drawing.Size(491, 217);
+            this.dgvMarchant.Size = new System.Drawing.Size(315, 217);
             this.dgvMarchant.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(421, 383);
+            this.label2.Location = new System.Drawing.Point(45, 365);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "Back To Home";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(104, 175);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(104, 242);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 21;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Location = new System.Drawing.Point(9, 242);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(75, 23);
+            this.btnCreate.TabIndex = 20;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(9, 175);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 19;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(282, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Marchant";
+            // 
+            // txtMarchant
+            // 
+            this.txtMarchant.Location = new System.Drawing.Point(340, 52);
+            this.txtMarchant.Name = "txtMarchant";
+            this.txtMarchant.Size = new System.Drawing.Size(145, 20);
+            this.txtMarchant.TabIndex = 12;
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 405);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnCreate);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvMarchant);
             this.Controls.Add(this.groupBox2);
@@ -139,6 +206,7 @@
             this.Name = "Payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment";
+            this.Load += new System.EventHandler(this.Payment_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarchant)).EndInit();
@@ -153,9 +221,15 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.DataGridView dgvMarchant;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.TextBox txtMarchant;
+        private System.Windows.Forms.Label label4;
     }
 }
