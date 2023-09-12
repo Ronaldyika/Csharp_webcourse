@@ -30,20 +30,24 @@
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAmount = new System.Windows.Forms.TextBox();
-            this.txtCustomerID = new System.Windows.Forms.TextBox();
-            this.dgvMarchant = new System.Windows.Forms.DataGridView();
+            this.dgvPayment = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.cmbMarchantID = new System.Windows.Forms.ComboBox();
+            this.cmbCustomerID = new System.Windows.Forms.ComboBox();
+            this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.txtMarchant = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMarchant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -69,6 +73,10 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox2.Controls.Add(this.lblID);
+            this.groupBox2.Controls.Add(this.cmbCustomerID);
+            this.groupBox2.Controls.Add(this.ID);
+            this.groupBox2.Controls.Add(this.cmbMarchantID);
             this.groupBox2.Controls.Add(this.txtMarchant);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label1);
@@ -80,6 +88,15 @@
             this.groupBox2.Size = new System.Drawing.Size(491, 72);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(282, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Marchant";
             // 
             // label1
             // 
@@ -106,25 +123,17 @@
             this.txtAmount.Size = new System.Drawing.Size(194, 20);
             this.txtAmount.TabIndex = 9;
             // 
-            // txtCustomerID
+            // dgvPayment
             // 
-            this.txtCustomerID.Location = new System.Drawing.Point(340, 19);
-            this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.ReadOnly = true;
-            this.txtCustomerID.Size = new System.Drawing.Size(145, 20);
-            this.txtCustomerID.TabIndex = 8;
-            // 
-            // dgvMarchant
-            // 
-            this.dgvMarchant.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMarchant.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvMarchant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarchant.Location = new System.Drawing.Point(185, 161);
-            this.dgvMarchant.Name = "dgvMarchant";
-            this.dgvMarchant.Size = new System.Drawing.Size(315, 217);
-            this.dgvMarchant.TabIndex = 17;
+            this.dgvPayment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPayment.Location = new System.Drawing.Point(185, 161);
+            this.dgvPayment.Name = "dgvPayment";
+            this.dgvPayment.Size = new System.Drawing.Size(315, 217);
+            this.dgvPayment.TabIndex = 17;
             // 
             // label2
             // 
@@ -174,21 +183,53 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // label4
+            // cmbMarchantID
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(282, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Marchant";
+            this.cmbMarchantID.FormattingEnabled = true;
+            this.cmbMarchantID.Location = new System.Drawing.Point(340, 51);
+            this.cmbMarchantID.Name = "cmbMarchantID";
+            this.cmbMarchantID.Size = new System.Drawing.Size(121, 21);
+            this.cmbMarchantID.TabIndex = 13;
+            // 
+            // cmbCustomerID
+            // 
+            this.cmbCustomerID.FormattingEnabled = true;
+            this.cmbCustomerID.Location = new System.Drawing.Point(340, 18);
+            this.cmbCustomerID.Name = "cmbCustomerID";
+            this.cmbCustomerID.Size = new System.Drawing.Size(121, 21);
+            this.cmbCustomerID.TabIndex = 14;
+            // 
+            // txtCustomerID
+            // 
+            this.txtCustomerID.Location = new System.Drawing.Point(340, 19);
+            this.txtCustomerID.Name = "txtCustomerID";
+            this.txtCustomerID.ReadOnly = true;
+            this.txtCustomerID.Size = new System.Drawing.Size(110, 20);
+            this.txtCustomerID.TabIndex = 8;
             // 
             // txtMarchant
             // 
             this.txtMarchant.Location = new System.Drawing.Point(340, 52);
             this.txtMarchant.Name = "txtMarchant";
-            this.txtMarchant.Size = new System.Drawing.Size(145, 20);
+            this.txtMarchant.Size = new System.Drawing.Size(110, 20);
             this.txtMarchant.TabIndex = 12;
+            // 
+            // ID
+            // 
+            this.ID.AutoSize = true;
+            this.ID.Location = new System.Drawing.Point(173, 54);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(18, 13);
+            this.ID.TabIndex = 23;
+            this.ID.Text = "ID";
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(200, 54);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 13);
+            this.lblID.TabIndex = 24;
             // 
             // Payment
             // 
@@ -200,7 +241,7 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvMarchant);
+            this.Controls.Add(this.dgvPayment);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Name = "Payment";
@@ -209,7 +250,7 @@
             this.Load += new System.EventHandler(this.Payment_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMarchant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,14 +263,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtAmount;
-        private System.Windows.Forms.TextBox txtCustomerID;
-        private System.Windows.Forms.DataGridView dgvMarchant;
+        private System.Windows.Forms.DataGridView dgvPayment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.TextBox txtMarchant;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbMarchantID;
+        private System.Windows.Forms.ComboBox cmbCustomerID;
+        private System.Windows.Forms.TextBox txtMarchant;
+        private System.Windows.Forms.TextBox txtCustomerID;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label ID;
     }
 }
